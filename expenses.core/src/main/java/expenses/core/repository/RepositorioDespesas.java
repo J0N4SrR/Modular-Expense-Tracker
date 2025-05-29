@@ -4,12 +4,18 @@ import expenses.core.model.Categoria;
 import expenses.core.model.Despesa;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 public class RepositorioDespesas implements Repositorio{
     List<Despesa> listaDeDespesa = new ArrayList<Despesa>();
     private int nId = 0;
+
+
+    public List<Despesa> getListaDeDespesa() {
+        return listaDeDespesa;
+    }
 
     private void registrarDespesa(Despesa despesa) {
         nId++;
@@ -24,7 +30,11 @@ public class RepositorioDespesas implements Repositorio{
 
     @Override
     public void removerDespesa(int id) {
-        listaDeDespesa.remove(id);
+        for(Despesa despesa : listaDeDespesa){
+            if(despesa.getIdDespesa() == id){
+                listaDeDespesa.remove(despesa);
+            }
+        }
     }
 
     @Override
@@ -32,6 +42,7 @@ public class RepositorioDespesas implements Repositorio{
         listaDeDespesa.get(id).setDescricao(novaDescricao);
         listaDeDespesa.get(id).setValor(novoValor);
         listaDeDespesa.get(id).setCategoria(novaCategoria);
+        listaDeDespesa.get(id).setDataModificacao(LocalDate.now());
     }
 
     @Override
