@@ -17,6 +17,10 @@ public class Despesa {
         this.data = LocalDate.now();
     }
 
+    public BigDecimal getValor() {
+        return valor;
+    }
+
     public void setIdDespesa(int idDespesa) {
         this.idDespesa = idDespesa;
     }

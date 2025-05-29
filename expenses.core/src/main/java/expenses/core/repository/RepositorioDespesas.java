@@ -36,11 +36,11 @@ public class RepositorioDespesas implements Repositorio{
 
     @Override
     public List<Despesa> listarDespesas() {
-        return List.of();
+        return listaDeDespesa;
     }
 
     @Override
     public Despesa encontrarDespesaId(int id) {
-        return null;
+        return listaDeDespesa.get(id);
     }
 }
