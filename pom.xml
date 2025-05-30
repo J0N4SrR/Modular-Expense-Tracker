@@ -11,6 +11,7 @@
     <modules>
         <module>expenses.core</module>
         <module>expenses.cli</module>
+        <module>expenses.persistence</module>
     </modules>
 
     <properties>
@@ -33,13 +34,5 @@
             </plugins>
         </pluginManagement>
     </build>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-        </dependency>
-    </dependencies>
-
 
 </project>
