@@ -13,6 +13,8 @@ public class RepositorioDespesas implements Repositorio{
     private int nId = 0;
 
 
+
+
     public List<Despesa> getListaDeDespesa() {
         return listaDeDespesa;
     }
@@ -23,8 +25,8 @@ public class RepositorioDespesas implements Repositorio{
         listaDeDespesa.add(despesa);
     }
 
-    public void criarDespesa(String descricao, BigDecimal valor, Categoria categoria){
-        Despesa despesa = new Despesa(descricao,valor,categoria);
+    public void criarDespesa(String descricao, BigDecimal valor, Categoria categoria, LocalDate data){
+        Despesa despesa = new Despesa(descricao,valor,categoria, data);
         registrarDespesa(despesa);
     }
 
@@ -54,4 +56,6 @@ public class RepositorioDespesas implements Repositorio{
     public Despesa encontrarDespesaId(int id) {
         return listaDeDespesa.get(id);
     }
+
+
 }

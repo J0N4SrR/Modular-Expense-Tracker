@@ -10,6 +10,8 @@ public enum Categoria {
     PESSOAL("pessoal"),
     DIVERSOS("diversos");
 
+
+
     private String descricao;
 
     Categoria(String descricao) {
