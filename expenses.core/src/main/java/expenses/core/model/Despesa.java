@@ -23,6 +23,10 @@ public class Despesa {
 
     }
 
+    public Despesa() {
+    }
+
+
     public BigDecimal getValor() {
         return valor;
     }
