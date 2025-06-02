@@ -4,7 +4,9 @@ import expenses.core.model.Categoria;
 import expenses.core.model.Despesa;
 import expenses.persistence.GravarJson;
 
+import java.io.IOException;
 import java.math.BigDecimal;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -24,8 +26,8 @@ public class RepositorioDespesas implements Repositorio{
         inicializarRepositorio();
     }
 
-    private void inicializarRepositorio() {
-        if(){
+    private void inicializarRepositorio() throws IOException {
+        if(Files.exists(arquivoJson)){
 
         }
     }
