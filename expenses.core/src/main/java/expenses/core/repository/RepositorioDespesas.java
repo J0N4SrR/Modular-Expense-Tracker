@@ -4,7 +4,6 @@ import expenses.core.model.Categoria;
 import expenses.core.model.Despesa;
 import expenses.persistence.GravarJson;
 
-import java.io.File;
 import java.math.BigDecimal;
 import java.nio.file.Path;
 import java.time.LocalDate;
@@ -13,7 +12,7 @@ import java.util.List;
 
 public class RepositorioDespesas implements Repositorio{
     private final Path arquivoJson;
-    File arquivo = new File(arquivoJson.toUri());
+
 
     List<Despesa> listaDeDespesa = new ArrayList<Despesa>();
     private int nId = 0;
@@ -26,7 +25,7 @@ public class RepositorioDespesas implements Repositorio{
     }
 
     private void inicializarRepositorio() {
-        if(arquivo.exists()){
+        if(){
 
         }
     }
